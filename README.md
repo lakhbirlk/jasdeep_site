@@ -57,14 +57,14 @@ with Dr. Kaur before the site goes live.**
       Council of Delhi also publishes a roll of advocates where it can be confirmed.
 - [ ] **LL.B. university and year of graduation.** Not supplied, so the *Bachelor of Laws (LL.B.)*
       card names the degree only. See §4.2 for where to add the university.
-- [ ] **Publication details**, for the remaining items in the Publications section:
-  - the two research items already on the page — publisher or journal, year, ISBN/ISSN, and a
-    link *only* if a real one exists. (Two further papers now have their journal, year, DOI and
-    a verified link on the page: see §2.1.)
-  - the two books — *Handbook on Banking Laws in India* and *The Prevention of Money Laundering
-    Act, 2002* — publisher and ISBN. The titles and the year (2025) are on the page; **the
-    publisher and ISBN are not**, because neither has been supplied. Nothing on the page now
-    says they are missing — add them under each title in Section H when they are confirmed.
+- [ ] **Publication details**, for the two research items that still lack them:
+  - the maintenance/domestic-violence paper and the juvenile-justice research topic — publisher or
+    journal, year, ISBN/ISSN, and a link *only* if a real one exists.
+  - The two papers and the two books are now complete: see §2.1 for the papers and §2.2 for the
+    books (titles, publisher, ISBN and purchase links).
+- [ ] **Amazon links.** Both books link to `amzn.in` short links, which were resolving on
+      12 October 2026. Short links can be retired by Amazon, so re-check them occasionally — a dead
+      "Buy on Amazon" button is worse than none. The links carry no affiliate tag.
 - [ ] **Testimonial consent.** Confirm that each of the four clients named in the testimonials
       graphic has agreed to being named on a public website, and to the description of their
       matter being published. See §11 — this is the most sensitive thing on the site.
@@ -124,6 +124,30 @@ Two things worth knowing about these:
 
 The other two items — the maintenance/domestic-violence paper and the juvenile-justice research
 topic — are unchanged and still have **no link**, because none has been verified.
+
+### 2.2 The two books, added 12 October 2026
+
+Both books are listed in Section H with their publisher, ISBN and a purchase link. The publisher
+and ISBN were **read from the Amazon product pages**, not supplied by the advocate, so they should
+be checked against the books themselves (the copyright page) before launch.
+
+| On the page | Publisher, year | ISBN | Link |
+|---|---|---|---|
+| *Handbook on Banking Laws in India: Legal Framework and Contemporary Issues* | Bluerose Publishers Pvt. Ltd., 2025 | 978-9371395830 | `amzn.in/d/01nVWf9W` |
+| *The Prevention of Money Laundering Act, 2002: Legal Perspectives and Case Law* | Bluerose Publishers Pvt. Ltd., 2025 | 978-9370180123 | `amzn.in/d/07lo8VCH` |
+
+Three things worth knowing:
+
+1. **The two links are `amzn.in` short links.** Both resolved on 12 October 2026 and each was
+   matched to the correct title before being wired up, but short links can be retired by Amazon.
+   Re-check them occasionally — a dead "Buy on Amazon" button is worse than no button. Neither
+   link carries an affiliate tag.
+2. **Each book's `<li>` in `books__list`** holds the title in `<strong>`, then a `<span>` with
+   "[Publisher], [year]. ISBN [number].", then a `.pub__links` div with the purchase link. To
+   change any of it, edit that `<li>` directly — see §4.2.
+3. **A book purchase link on an advocate's site is worth a second look under §11.** Selling a
+   textbook is not advertising legal services and the page makes no claim about it, so it has been
+   left in; but the compliance review in §12 item 13 should cover Section H as well.
 
 ---
 
@@ -468,7 +492,8 @@ deleting the `#testimonials` link from the footer, and removing
 2. [ ] Office address added, or the row left hidden deliberately
 3. [ ] Enrolment number verified before it is added
 4. [ ] LL.B. university confirmed, or the card left as it is
-5. [ ] Publisher and ISBN added beneath the two book titles in Section H
+5. [ ] Publisher and ISBN confirmed against the books themselves — both are already on the page
+       (§2.2), but they were read off Amazon rather than supplied, so verify them
 6. [ ] Photograph permissions confirmed, including the convocation photograph and the four
        client portraits in the testimonials graphic
 7. [ ] **Written consent obtained from all four named clients** (§11.1)
@@ -476,6 +501,7 @@ deleting the `#testimonials` link from the footer, and removing
 9. [ ] `example.com` replaced everywhere — page, `robots.txt`, `sitemap.xml`
 10. [ ] Site opened on a real phone, and on a desktop, and read end to end
 11. [ ] Enquiry form tested: submit it and confirm the email or WhatsApp draft appears
-12. [ ] Every publication link clicked and confirmed to resolve
+12. [ ] Every publication link clicked and confirmed to resolve — including the two `amzn.in`
+       book links, which are short links and can expire (§2.2)
 13. [ ] Bar Council of India compliance reviewed by the advocate — including Section J (§11.1)
 14. [ ] Sitemap submitted to Google Search Console
