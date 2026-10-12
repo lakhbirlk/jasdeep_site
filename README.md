@@ -89,10 +89,10 @@ accurate and current:
 - [ ] "over 11 years of legal experience"
 - [ ] the practice areas listed in Section E
 - [ ] the roles in the Experience timeline (Bar Council of Delhi; Government of NCT of Delhi,
-      former Law Officer; and the others)
+      former Law Officer). Two further roles were removed on 12 October 2026 — see §2.3
 - [ ] the academic qualifications, including the Ph.D. (Amity University) and LL.M. (Guru Gobind
       Singh Indraprastha University, 2017)
-- [ ] the achievements and legal-aid work in Section I
+- [ ] the achievements listed in Section I
 - [ ] "New Delhi, India — South Delhi" as the location in the contact panel
 
 ### Optional
@@ -104,7 +104,7 @@ accurate and current:
 
 ### 2.1 Publications added on 12 October 2026
 
-Four publications are on the page. For the two added in this round, the journal, volume, year and
+Three publications are on the page. For the two added in this round, the journal, volume, year and
 DOI were read from the published articles themselves, and **both links were opened and confirmed
 to resolve** — which is the standard this site holds itself to before showing a link.
 
@@ -122,8 +122,9 @@ Two things worth knowing about these:
 2. **REDVET is a veterinary journal.** A law paper in it is unusual, and a visitor who follows the
    link will see that. The page states the journal name as published rather than hiding it.
 
-The other two items — the maintenance/domestic-violence paper and the juvenile-justice research
-topic — are unchanged and still have **no link**, because none has been verified.
+The third item — the maintenance/domestic-violence paper — is unchanged and still has **no link**,
+because none has been verified. (A fourth entry, a research topic on legal aid counsel in juvenile
+justice, was on the page until 12 October 2026; see §2.3.)
 
 ### 2.2 The two books, added 12 October 2026
 
@@ -148,6 +149,42 @@ Three things worth knowing:
 3. **A book purchase link on an advocate's site is worth a second look under §11.** Selling a
    textbook is not advertising legal services and the page makes no claim about it, so it has been
    left in; but the compliance review in §12 item 13 should cover Section H as well.
+
+### 2.3 Legal aid and pro bono — removed on 12 October 2026
+
+**On 12 October 2026 the advocate directed that every reference to legal aid and pro bono be
+removed from the site.** It had been added earlier the same day as a "Pro Bono Legal Services"
+panel; that direction reverses it. Everything below is now gone from `index.html`, and the page
+contains no instance of "legal aid", "pro bono" or "legal services authority":
+
+| Removed | Where it was |
+|---|---|
+| The `Pro Bono Legal Services` panel — commitment sentence, "Our Focus" tags, "Our Mission: Justice for All" | Section I, as an `<aside class="probono">` |
+| The `Legal Aid and Public Service` achievements card | Section I |
+| A research-topic entry, *The Role of Legal Aid Counsel in Juvenile Justice…* | Section H, publications |
+| The `South Delhi Legal Services Authority — Panel Lawyer` timeline entry | Section F, experience |
+| The `Delhi State Legal Services Authority — Resource Person` timeline entry | Section F, experience |
+| A trust-bar item, `Legal Aid & public service experience` | Section C |
+| The FAQ question on legal aid eligibility | Section L |
+| The `Legal Aid Eligibility Enquiry` option in the enquiry form | Section M, and its label in the form script |
+| A footer link, `Pro Bono & Legal Aid` | Section N, "Enquire About" |
+| The `Legal Aid` entry in the (disabled) JSON-LD `knowsAbout` list | `<head>` |
+| The words "and legal aid" in the meta description, OG description and Twitter description | `<head>` |
+| The whole `.probono` CSS block, and its entry in the print stylesheet | CSS section 13 |
+| `Legal aid-related guidance` from the child-welfare practice area; two mentions in Section D | Sections D, E |
+
+Three consequences worth knowing:
+
+1. **Two real credentials were removed with it.** The South Delhi Legal Services Authority panel
+   role and the Delhi State Legal Services Authority resource-person role were genuine experience
+   entries, not marketing copy. They are in git history (`git show 7fb481c:index.html`) and can be
+   restored on their own if the removal was only ever meant to cover the *service offering*.
+2. **The page counts changed**, so the grids were rebalanced: the trust bar and the achievements
+   grid both went from four columns to three (`repeat(4,1fr)` → `repeat(3,1fr)`). The responsive
+   rules at 940px and 640px still work unchanged.
+3. **Do not re-add any of this** without a fresh instruction. The child-welfare and juvenile-justice
+   content was deliberately kept — that is a separate strand of work and was not part of this
+   removal.
 
 ---
 
@@ -505,3 +542,5 @@ deleting the `#testimonials` link from the footer, and removing
        book links, which are short links and can expire (§2.2)
 13. [ ] Bar Council of India compliance reviewed by the advocate — including Section J (§11.1)
 14. [ ] Sitemap submitted to Google Search Console
+15. [ ] **Confirm the legal-aid and pro-bono removal was meant to include the two Legal Services
+       Authority roles** in the Experience timeline, which were real credentials (§2.3)
