@@ -186,6 +186,35 @@ Three consequences worth knowing:
    content was deliberately kept — that is a separate strand of work and was not part of this
    removal.
 
+### 2.4 Legal and taxation consultation — added on 12 October 2026
+
+A seventh practice area, **Legal and Taxation Consultation**, was added to Section E the same day.
+It is wired in everywhere the other practice areas appear:
+
+| Where | What was added |
+|---|---|
+| Section E | A `.practice` card, icon `#i-file`, with four bullets |
+| Section M | An `<option value="legal-taxation">` in the enquiry-form select |
+| Form script | A matching `'legal-taxation'` entry in `AREA_TEXT`, so the email/WhatsApp draft names it |
+| Section N | A `Legal & Taxation Consultation` link in the footer's "Enquire About" column |
+| `<head>` | "and legal and taxation consultation" appended to the meta, OG and Twitter descriptions |
+| `<head>` | `"Taxation Law"` appended to the JSON-LD `knowsAbout` (the block is still disabled) |
+| Sections C, D, K | "taxation" added to the hero lead, the About paragraph, the first summary bullet and the "Broad Legal Practice" card |
+
+**The wording is deliberately general, and you should check it.** No specifics of the taxation work
+were supplied — no forums, no statutes, no years of practice in it — so the card describes the
+*service* ("consultation and advisory services on legal and taxation questions", compliance,
+notices, documentation, appropriate forum) rather than making a claim about tax experience. If
+there are real specifics to state — income-tax and GST matters, appeals, the forums she appears
+before — replace the bullets with them. **Do not add a claim that has not been confirmed**, the
+same rule the rest of the page follows.
+
+**One layout consequence:** `.practice-grid` is a fixed three-column grid
+(`repeat(3,1fr)`, 2 columns under 1080px, 1 under 640px). Seven cards fill the first two rows and
+leave a single card alone in the third. If that reads badly, either split one of the broader areas
+into two cards to make eight, or change the grid to `repeat(auto-fit,minmax(280px,1fr))` — but
+check the result at every breakpoint before publishing.
+
 ---
 
 ## 3. Opening and checking the site locally
@@ -277,6 +306,11 @@ Two places that need a small amount of care:
   the `<strong>` title. The link markup for a research item is shown in a comment beside it:
   `<div class="pub__links"><a href="https://…">Read the paper</a></div>`.
   **Only add a link that actually resolves to the paper.**
+- **Adding a practice area** — in Section E, copy an existing `<article class="practice">` and
+  change the icon, `<h3>`, `.practice__desc` and the `.practice__list` bullets. Then give it a
+  unique `data-enquire` value on the `.practice__link`, add a matching `<option value="…">` to the
+  select in Section M, and add the same key to `AREA_TEXT` in the form script — the enquiry link
+  silently does nothing unless all three line up. Note the grid is three columns (§2.4).
 
 ### 4.3 Replacing the photographs
 
