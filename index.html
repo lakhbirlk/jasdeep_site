@@ -534,6 +534,36 @@ ul{margin:0;padding:0;list-style:none}
 .ach svg{width:24px;height:24px;stroke:var(--gold);margin-bottom:16px}
 .ach h3{font-size:1.02rem;margin-bottom:9px;line-height:1.3}
 .ach p{font-size:.88rem;color:var(--grey)}
+/* Pro bono panel, closing the achievements section. The emoji in the supplied
+   copy is replaced by the scale icon so it matches the rest of the page, which
+   uses inline SVG throughout and no emoji. */
+.probono{
+  margin-top:clamp(28px,3.5vw,42px);
+  background:var(--ivory);border:1px solid var(--line-soft);border-left:3px solid var(--gold);
+  border-radius:var(--radius);padding:clamp(26px,3vw,38px);
+}
+.probono__head{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.probono__icon{
+  width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:var(--gold-wash);border:1px solid var(--line-gold);
+}
+.probono__icon svg{width:22px;height:22px;stroke:var(--gold)}
+.probono__head .eyebrow{margin-bottom:5px}
+.probono__head h3{font-size:clamp(1.2rem,2.2vw,1.5rem)}
+.probono__lead{font-size:.98rem;color:#3d434b;max-width:82ch}
+.probono__label{
+  margin-top:22px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;
+}
+.probono__tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:11px}
+.probono__tags li{
+  font-size:.82rem;font-weight:500;color:var(--navy);
+  background:var(--white);border:1px solid var(--line-gold);border-radius:100px;padding:7px 15px;
+}
+.probono__mission{
+  margin-top:24px;padding-top:18px;border-top:1px solid var(--line-soft);
+  font-family:var(--serif);font-size:1.08rem;font-weight:600;color:var(--navy);
+}
 
 /* ==========================================================================
    14. CLIENT TESTIMONIALS
@@ -839,7 +869,7 @@ section[id]{scroll-margin-top:96px}
   .section{padding-block:20px}
   .hero{background:#fff;color:#000}
   .hero h1,.section--navy h2{color:#000}
-  .card,.practice,.cred,.ach,.value,.pub,.courts,.facts,.form-card{box-shadow:none;border-color:#ccc}
+  .card,.practice,.cred,.ach,.value,.pub,.courts,.facts,.form-card,.probono{box-shadow:none;border-color:#ccc}
 }
 </style>
 </head>
@@ -1505,11 +1535,17 @@ section[id]{scroll-margin-top:96px}
           <ul class="books__list">
             <li>
               <strong>Handbook on Banking Laws in India: Legal Framework and Contemporary Issues</strong>
-              <span>2025</span>
+              <span>Bluerose Publishers Pvt. Ltd., 2025. ISBN 978-9371395830.</span>
+              <div class="pub__links">
+                <a href="https://amzn.in/d/01nVWf9W" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+              </div>
             </li>
             <li>
               <strong>The Prevention of Money Laundering Act, 2002: Legal Perspectives and Case Law</strong>
-              <span>2025</span>
+              <span>Bluerose Publishers Pvt. Ltd., 2025. ISBN 978-9370180123.</span>
+              <div class="pub__links">
+                <a href="https://amzn.in/d/07lo8VCH" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -1567,6 +1603,36 @@ section[id]{scroll-margin-top:96px}
         </p>
       </article>
     </div>
+
+    <!-- Pro bono and legal aid. It sits inside this section rather than in one of
+         its own because it is the same strand of work as the legal-aid card
+         above, not a separate service. -->
+    <aside class="probono">
+      <div class="probono__head">
+        <div class="probono__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-scale"/></svg></div>
+        <div>
+          <span class="eyebrow">Pro Bono</span>
+          <h3>Pro Bono Legal Services</h3>
+        </div>
+      </div>
+
+      <p class="probono__lead">
+        Committed to providing legal assistance and promoting access to justice for economically
+        weaker and marginalised sections of society.
+      </p>
+
+      <p class="probono__label">Our Focus</p>
+      <ul class="probono__tags">
+        <li>Women's rights</li>
+        <li>Family disputes</li>
+        <li>Criminal law</li>
+        <li>Children's rights</li>
+        <li>Senior citizens' rights</li>
+        <li>Legal awareness</li>
+      </ul>
+
+      <p class="probono__mission">Our Mission: Justice for All, Regardless of Financial Status.</p>
+    </aside>
   </div>
 </section>
 
@@ -2013,6 +2079,7 @@ section[id]{scroll-margin-top:96px}
           <li><a href="#contact" data-enquire="corporate-law">Corporate &amp; Commercial</a></li>
           <li><a href="#contact" data-enquire="domestic-violence">Domestic Violence &amp; Women's Rights</a></li>
           <li><a href="#contact" data-enquire="child-welfare">Child Welfare &amp; Juvenile Justice</a></li>
+          <li><a href="#contact" data-enquire="legal-aid">Pro Bono &amp; Legal Aid</a></li>
         </ul>
       </div>
 
