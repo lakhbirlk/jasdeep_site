@@ -42,9 +42,10 @@ with Dr. Kaur before the site goes live.**
 
 ### Required decisions
 
-- [ ] **Domain name.** The site currently uses `https://example.com/` in four places
-      (`<link rel="canonical">`, `og:url`, `og:image`, `twitter:image`), in `robots.txt`, and in
-      `sitemap.xml`. All of them must be changed to the real address. See §7.
+- [x] **Domain name.** Set to `https://advocatedrjasdeepkaur.online/` in the four places in
+      `index.html` (`<link rel="canonical">`, `og:url`, `og:image`, `twitter:image`), in
+      `robots.txt`, in `sitemap.xml`, and in the disabled JSON-LD block. If the live address ever
+      changes, all of them must be changed together. See §7.
 
 ### Content that is deliberately missing
 
@@ -414,8 +415,8 @@ address you have given out.
 
 ## 7. Using a custom domain
 
-A domain such as `jasdeepkaur.in` costs roughly ₹700–1,200 per year. Good registrars for India
-include GoDaddy, BigRock and Namecheap.
+The site is configured for `advocatedrjasdeepkaur.online`. A `.online` domain costs roughly
+₹400–1,200 per year. Good registrars for India include GoDaddy, BigRock and Namecheap.
 
 **On Netlify:** Site configuration → Domain management → Add a domain. Netlify then shows either an
 `A` record (for the bare domain) or a `CNAME` (for `www`) to create at your registrar.
@@ -425,15 +426,17 @@ include GoDaddy, BigRock and Namecheap.
 (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`). Then tick
 **Enforce HTTPS**.
 
-Both give you a free TLS certificate. After the domain resolves, **update every `example.com`**:
+Both give you a free TLS certificate. If the live address ever changes, **update every URL**:
 
 1. `<link rel="canonical" href="…">` in the `<head>`
 2. `og:url`, `og:image` and `twitter:image` in the `<head>`
-3. the `Sitemap:` line in `robots.txt`
-4. every `<loc>` in `sitemap.xml`
+3. `"url"` in the JSON-LD block further down the `<head>` (once enabled)
+4. the `Sitemap:` line in `robots.txt`
+5. every `<loc>` in `sitemap.xml`
 
-Pick one canonical form — `https://jasdeepkaur.in/` or `https://www.jasdeepkaur.in/` — and use it
-consistently everywhere. Mixing the two splits your search ranking between them.
+Pick one canonical form — `https://advocatedrjasdeepkaur.online/` or
+`https://www.advocatedrjasdeepkaur.online/` — and use it consistently everywhere. Mixing the two
+splits your search ranking between them.
 
 ---
 
@@ -472,7 +475,8 @@ Done already, inside `index.html`:
 
 Still to do:
 
-- [ ] Replace every `example.com` with the real domain (§7)
+- [x] Domain set to `advocatedrjasdeepkaur.online` everywhere (§7) — revisit only if the address
+      changes
 - [ ] Uncomment and complete the JSON-LD block, once the facts in it are final (see below)
 - [ ] Submit `sitemap.xml` to Google Search Console and Bing
 - [ ] Add the site link to any professional listings, and keep the name, address and phone number
@@ -572,7 +576,7 @@ deleting the `#testimonials` link from the footer, and removing
        client portraits in the testimonials graphic
 7. [ ] **Written consent obtained from all four named clients** (§11.1)
 8. [ ] Convocation caption confirmed against the actual ceremony (§2)
-9. [ ] `example.com` replaced everywhere — page, `robots.txt`, `sitemap.xml`
+9. [x] Domain set to `advocatedrjasdeepkaur.online` — page, `robots.txt`, `sitemap.xml`
 10. [ ] Site opened on a real phone, and on a desktop, and read end to end
 11. [ ] Enquiry form tested: submit it and confirm the email or WhatsApp draft appears
 12. [ ] Every publication link clicked and confirmed to resolve — including the two `amzn.in`

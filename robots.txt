@@ -1,10 +1,9 @@
 # robots.txt — Dr. Jasdeep Kaur, Advocate
 #
 # Everything on this site is meant to be publicly indexable, so nothing is
-# disallowed. The only thing that must be changed before launch is the domain
-# in the Sitemap line below, which has to match the live address exactly.
+# disallowed. The Sitemap line below must match the live address exactly.
 
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://advocatedrjasdeepkaur.online/sitemap.xml
