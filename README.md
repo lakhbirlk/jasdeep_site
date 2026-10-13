@@ -533,8 +533,11 @@ attach to it and neither is resolved by putting the graphic on the page:
 
 1. **Bar Council of India rules.** Rule 36 of the BCI Rules (Part VI, Chapter II) bars an advocate
    from advertising or soliciting work, directly or indirectly. Client testimonials, ratings and
-   results claims are the standard example of what that rule is read to prohibit. The page's own
-   disclaimers say no outcome is guaranteed, which does not neutralise a "Real Results" claim.
+   results claims are the standard example of what that rule is read to prohibit. The section once
+   carried a disclaimer saying no outcome is guaranteed; **that disclaimer and the caption under
+   the graphic were removed on 13 October 2026**, so the "Real Results" strapline now stands
+   unqualified. Reinstating the disclaimer would not by itself cure the rule 36 position, but its
+   absence removes a qualification that was there before.
 2. **Client confidentiality, which is independent of the advertising rule.** Each testimonial links
    a named person to a specific criminal proceeding. Even with consent, publishing "this person was
    facing an FIR / applied for anticipatory bail / was the subject of a police complaint" on the
