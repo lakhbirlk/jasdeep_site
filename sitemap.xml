@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap for the Dr. Jasdeep Kaur, Advocate site.
+
+  This is a single-page site, so there is one entry. Before launch:
+    1. keep the trailing slash, and keep the address identical to the
+       <link rel="canonical"> in index.html;
+    2. update <lastmod> whenever the content changes (YYYY-MM-DD).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://advocatedrjasdeepkaur.online/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+</urlset>
